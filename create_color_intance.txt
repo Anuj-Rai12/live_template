@@ -1,0 +1,4 @@
+@RequiresApi(Build.VERSION_CODES.M)
+fun Activity.getColorInt(color: Int): Int {
+    return resources.getColor(color, null)
+}

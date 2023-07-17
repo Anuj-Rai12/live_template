@@ -1,0 +1,4 @@
+        
+    private val _$Name$ = MutableLiveData<$Type$>()
+    val $Name$: LiveData<$Type$>
+        get() = _$Name$

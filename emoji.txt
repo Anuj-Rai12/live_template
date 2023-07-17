@@ -1,0 +1,1 @@
+fun getEmojiByUnicode(unicode: Int) = String(Character.toChars(unicode))

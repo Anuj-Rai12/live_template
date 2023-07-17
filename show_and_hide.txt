@@ -1,0 +1,12 @@
+fun View.hide() {
+    this.isVisible = false
+}
+
+fun View.show() {
+    this.isVisible = true
+}
+
+
+fun View.invisible() {
+    this.visibility = android.view.View.INVISIBLE
+}

@@ -1,0 +1,4 @@
+@androidx.compose.runtime.Composable
+private fun $NAME$() {
+$END$
+}

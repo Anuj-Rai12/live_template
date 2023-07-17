@@ -1,0 +1,5 @@
+enum class $Name_of_Enum_cls${
+SUCCESS,
+FAILURE,
+ERROR
+}

@@ -1,0 +1,43 @@
+import android.view.ViewGroup
+import android.view.LayoutInflater
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+
+typealias $Name_lam$ = (data: $OBJ$) -> Unit
+
+class $NAME$(private val itemClicked:$Name_lam$) : ListAdapter<$OBJ$, $NAME$.$NAME_HOL$ViewHolder>(diffUtil) {
+    inner class $NAME_HOL$ViewHolder(private val binding: $BINDING$) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun $NAME_OF_FUNCTION$(data: $OBJ$,itemClicked:$Name_lam$) {
+        
+        }
+    }
+
+    companion object {
+        val diffUtil = object : DiffUtil.ItemCallback<$OBJ$>() {
+            override fun areItemsTheSame(
+                oldItem: $OBJ$,
+                newItem: $OBJ$
+            ) = oldItem.title == newItem.title
+            
+            override fun areContentsTheSame(
+                oldItem: $OBJ$,
+                newItem: $OBJ$
+            )= oldItem == newItem
+        }
+    }
+    
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):  $NAME_HOL$ViewHolder{
+        val binding=$BINDING$.inflate(LayoutInflater.from(parent.context),parent,false)
+        return $NAME_HOL$ViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: $NAME_HOL$ViewHolder, position: Int) {
+        val currItem=getItem(position)
+        currItem?.let { 
+        holder.$NAME_OF_FUNCTION$(it,itemClicked)    
+        }
+    }
+    
+}

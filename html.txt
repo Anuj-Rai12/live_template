@@ -1,0 +1,9 @@
+fun setHtmlTxt(txt: String, color: String): Spanned {
+    return if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+        Html.fromHtml(
+            "<font color=$color>$txt</font>", HtmlCompat.FROM_HTML_MODE_COMPACT
+        )
+    } else {
+        Html.fromHtml("<font color='$color'>$txt</font>")
+    }
+}

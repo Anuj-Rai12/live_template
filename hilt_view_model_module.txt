@@ -1,0 +1,12 @@
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class $Name_view_model$ @Inject constructor(
+    private val $Item_value$: $Type_of_variable$,
+    private val savedStateHandle: SavedStateHandle
+) : ViewModel() {
+
+}

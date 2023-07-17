@@ -1,0 +1,7 @@
+fun View.showSnackBar(msg: String, length: Int = Snackbar.LENGTH_SHORT, color: Int? = null) {
+    val snackBar = Snackbar.make(this, msg, length)
+    color?.let {
+        snackBar.view.setBackgroundColor(it)
+    }
+    snackBar.show()
+}
